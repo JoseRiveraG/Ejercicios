@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio</title>
+
+  <script>
+
+    
+    String.prototype.reverse=function(){return this.split("").reverse().join("");}
+
+   function testCapCua(palabra) {  
+    
+    
+    var inverseWord = word.reverse();
+    if (word == inverseWord) { 
+     alert("La palabra o numero '"+palabra+"' SI es cap i cua");
+     return(true); 
+    }
+    else {
+     alert("La palabra o numero '"+palabra+"' NO es cap i cua: '"+inverseWord+"'");
+     return(false); 
+    } 
+   } 
+  </script>
+ </head>
+ 
+ <body>
+     <h2>Su numero sera Capicúa?</h2>
+     <br>
+     <p>Digita numero</p>
+  <input type="text" placeholder="Introducir palabra." id="input-word" />
+     <br>
+     <br>
+  <input type="button" onclick="testCapCua(document.getElementById('input-word').value)" value="Verificar"/>
+
+
+</body>
+</html>

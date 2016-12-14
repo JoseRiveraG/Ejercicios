@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio</title>
+	<script type="text/javascript">
+	    var numero;
+        function cargar(){
+             numero = Math.floor(Math.random() * 20);
+        };
+
+		function juego(){
+			var num = document.getElementById('n').value
+
+			if(num > 20){
+				alert("Numero fuera de rango");
+			} else if(num > numero){
+				alert("El numero ingresado es Mayor");
+			} else if(num < numero){
+				alert("El numero ingresado es Menor");
+			} else if(num == numero){
+			    alert("Felicitaciones, has ganado"); 
+			    numero = Math.floor(Math.random() * 20);
+			};
+		};
+	</script>
+</head>
+<body>
+<h1>Adivinar Numero</h1>
+<p>Adivina un numero del 0 al 20.</p>
+<p>Si es correcto ese numero se cambia</p>
+<p>Click en el boton Jugar y adivina</p>
+<button onclick="cargar()">Jugar</button>
+<br>
+<br>
+<input type="number" id="n">
+<button onclick="juego()">Ver</button>
+</body>
+</html>
